@@ -6,31 +6,31 @@ export const Skills: React.FC = () => {
   const getCategoryIcon = (index: number) => {
     switch (index) {
       case 0:
-        return <Database className="w-5 h-5 text-teal-600" />;
+        return <Database className="w-5 h-5 text-[#C98F9D]" />;
       case 1:
-        return <Cpu className="w-5 h-5 text-teal-600" />;
+        return <Cpu className="w-5 h-5 text-[#C98F9D]" />;
       case 2:
-        return <ShieldCheck className="w-5 h-5 text-teal-600" />;
+        return <ShieldCheck className="w-5 h-5 text-[#C98F9D]" />;
       case 3:
-        return <Briefcase className="w-5 h-5 text-teal-600" />;
+        return <Briefcase className="w-5 h-5 text-[#C98F9D]" />;
       default:
-        return <Database className="w-5 h-5 text-teal-600" />;
+        return <Database className="w-5 h-5 text-[#C98F9D]" />;
     }
   };
 
   return (
-    <section id="skills" className="py-16 md:py-20 bg-white border-b border-slate-200">
+    <section id="skills" className="py-16 md:py-20 bg-white border-b border-[#e8e2dc]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mb-12">
-          <div className="text-xs font-semibold uppercase tracking-wider text-teal-700 mb-1">
+          <div className="text-xs font-semibold uppercase tracking-wider text-[#4B2E4F] mb-1">
             Competencies & Tooling
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#2D2A2E] tracking-tight font-display">
             Skills
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-slate-600 max-w-2xl">
+          <p className="mt-2 text-sm sm:text-base text-[#655f68] max-w-2xl">
             Technical proficiencies, applied AI methodologies, regulatory data operations, and business execution.
           </p>
         </div>
@@ -40,18 +40,18 @@ export const Skills: React.FC = () => {
           {SKILLS_CATEGORIES.map((cat, idx) => (
             <div
               key={cat.title}
-              className="bg-slate-50/70 rounded-xl border border-slate-200 p-6 sm:p-7 hover:border-teal-500/40 hover:bg-slate-50 transition-colors"
+              className="bg-[#faf8f5] rounded-xl border border-[#e8e2dc] p-6 sm:p-7 hover:border-[#C98F9D] hover:bg-white transition-colors"
             >
               {/* Category Header */}
-              <div className="flex items-center gap-3 mb-3 pb-3 border-b border-slate-200">
-                <div className="p-2 bg-white rounded-lg border border-slate-200 shadow-2xs">
+              <div className="flex items-center gap-3 mb-3 pb-3 border-b border-[#e8e2dc]">
+                <div className="p-2 bg-white rounded-lg border border-[#e8e2dc] shadow-2xs">
                   {getCategoryIcon(idx)}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 font-display">
+                  <h3 className="text-lg font-bold text-[#2D2A2E] font-display">
                     {cat.title}
                   </h3>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-[#857e8a]">
                     {cat.description}
                   </p>
                 </div>
@@ -70,8 +70,8 @@ export const Skills: React.FC = () => {
                       key={skill.name}
                       className={`inline-flex items-center px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
                         isSpecialNote
-                          ? 'bg-teal-50/80 text-teal-900 border border-teal-200 font-semibold'
-                          : 'bg-white text-slate-800 border border-slate-200 hover:border-slate-300'
+                          ? 'bg-[#fdf7f9] text-[#4B2E4F] border border-[#f1dae1] font-semibold'
+                          : 'bg-white text-[#2D2A2E] border border-[#e8e2dc] hover:border-[#C98F9D]'
                       }`}
                     >
                       {skill.name}
@@ -84,7 +84,7 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* Level of Experience Clarity Note */}
-        <div className="mt-8 text-center text-xs text-slate-500">
+        <div className="mt-8 text-center text-xs text-[#857e8a]">
           <span>* Specific exposure levels clearly indicated for transparency (R — Basic, BigQuery — Introductory, Azure DevOps — Exposure).</span>
         </div>
 

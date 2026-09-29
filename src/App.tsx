@@ -19,7 +19,7 @@ export default function App() {
   const [isRecruiterScanOpen, setIsRecruiterScanOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 selection:bg-teal-100 selection:text-teal-900">
+    <div className="min-h-screen flex flex-col bg-[#F7F3EF] text-[#2D2A2E] selection:bg-[#ebdff0] selection:text-[#4B2E4F]">
       {/* Top Navigation */}
       <Navbar onOpenRecruiterScan={() => setIsRecruiterScanOpen(true)} />
 
