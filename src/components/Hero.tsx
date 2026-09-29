@@ -3,7 +3,7 @@ import { ArrowDown, GraduationCap, Building2 } from 'lucide-react';
 import { HERO_DATA } from '../data/portfolioData';
 
 // Permanent headshot image for Valery Ortiz
-import headshotImage from '/valery-headshot.jpg';
+import headshotImage from '/valery-profile-photo.jpg';
 
 interface HeroProps {
   onOpenRecruiterScan: () => void;
