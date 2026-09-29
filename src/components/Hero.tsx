@@ -101,7 +101,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRecruiterScan }) => {
                 <img
                   src={headshotImage}
                   alt="Valery Ortiz"
-                  className="w-full h-full object-cover object-center select-none pointer-events-none"
+                  className="w-full h-full object-cover object-[50%_20%] select-none pointer-events-none"
                   referrerPolicy="no-referrer"
                 />
               </div>
