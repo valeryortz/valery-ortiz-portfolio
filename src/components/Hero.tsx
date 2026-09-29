@@ -2,8 +2,8 @@ import React from 'react';
 import { ArrowDown, GraduationCap, Building2 } from 'lucide-react';
 import { HERO_DATA } from '../data/portfolioData';
 
-// Professional headshot portrait asset
-import headshotImage from '../assets/images/headshot_placeholder_1790704504044.jpg';
+// Permanent headshot image for Valery Ortiz
+import headshotImage from '/valery-headshot.jpg';
 
 interface HeroProps {
   onOpenRecruiterScan: () => void;
@@ -100,8 +100,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRecruiterScan }) => {
               <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-slate-800 bg-slate-800 shadow-2xl flex items-center justify-center">
                 <img
                   src={headshotImage}
-                  alt="Valery Ortiz - Data Analytics & Operations"
-                  className="w-full h-full object-cover object-top select-none pointer-events-none"
+                  alt="Valery Ortiz"
+                  className="w-full h-full object-cover object-center select-none pointer-events-none"
                   referrerPolicy="no-referrer"
                 />
               </div>
