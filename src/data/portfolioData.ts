@@ -271,5 +271,5 @@ export const ABOUT_DATA = {
 export const CONTACT_DATA = {
   resumeLabel: "PDF Available",
   resumeUrl: "/Valery-Ortiz-Resume.pdf",
-  emailPlaceholder: "Professional Email - Add Before Publishing",
+  email: "vortizjimenez28@gmail.com",
 };

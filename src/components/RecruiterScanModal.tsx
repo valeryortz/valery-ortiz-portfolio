@@ -156,7 +156,7 @@ export const RecruiterScanModal: React.FC<RecruiterScanModalProps> = ({ isOpen, 
           <div className="p-3 bg-[#fdf7f9] rounded-lg border border-[#f1dae1] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-[#4B2E4F]">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-[#C98F9D] shrink-0" />
-              <span>Contact email placeholder ready for recruiter connection.</span>
+              <span>Contact email: <strong className="font-semibold text-[#2D2A2E]">{CONTACT_DATA.email}</strong></span>
             </div>
             <a
               href={CONTACT_DATA.resumeUrl}

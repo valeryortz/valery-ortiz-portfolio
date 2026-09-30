@@ -9,8 +9,8 @@ interface ResumeContactProps {
 export const ResumeContact: React.FC<ResumeContactProps> = ({ onOpenRecruiterScan }) => {
   const [copied, setCopied] = useState(false);
 
-  const handleCopyEmailPlaceholder = () => {
-    navigator.clipboard.writeText(CONTACT_DATA.emailPlaceholder);
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(CONTACT_DATA.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
@@ -84,13 +84,13 @@ export const ResumeContact: React.FC<ResumeContactProps> = ({ onOpenRecruiterSca
                 Feel free to reach out directly regarding data analyst roles, workflow optimization inquiries, or exploratory conversations in applied AI.
               </p>
 
-              {/* Email Placeholder Display */}
+              {/* Email Display */}
               <div className="bg-[#1a181b]/80 rounded-lg border border-[#3b373d] p-4 mb-4">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-[#C98F9D] mb-1">
-                  Candidate Email
+                  CANDIDATE EMAIL
                 </div>
                 <div className="font-mono text-xs sm:text-sm text-[#F7F3EF] break-all select-all">
-                  {CONTACT_DATA.emailPlaceholder}
+                  {CONTACT_DATA.email}
                 </div>
               </div>
             </div>
@@ -98,25 +98,21 @@ export const ResumeContact: React.FC<ResumeContactProps> = ({ onOpenRecruiterSca
             <div className="space-y-3">
               <button
                 type="button"
-                onClick={handleCopyEmailPlaceholder}
+                onClick={handleCopyEmail}
                 className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-[#4B2E4F] hover:bg-[#5d3962] border border-[#C98F9D]/50 rounded-lg transition-colors cursor-pointer"
               >
                 {copied ? (
                   <>
                     <Check className="w-4 h-4 text-[#C98F9D]" />
-                    <span>Placeholder Copied to Clipboard</span>
+                    <span>Email Copied to Clipboard</span>
                   </>
                 ) : (
                   <>
                     <Mail className="w-4 h-4 text-[#C98F9D]" />
-                    <span>Copy Email Placeholder</span>
+                    <span>Copy Email</span>
                   </>
                 )}
               </button>
-
-              <p className="text-[11px] text-center text-[#aba4b0]">
-                Please replace this placeholder with your active professional email address prior to public publishing.
-              </p>
             </div>
           </div>
 
