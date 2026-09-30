@@ -39,10 +39,9 @@ export const HERO_DATA = {
 export const SOCIAL_LINKS = [
   {
     name: "LinkedIn",
-    label: "LinkedIn - Update Link",
-    url: "#",
+    label: "LinkedIn Profile",
+    url: "https://www.linkedin.com/in/valery-ortiz",
     icon: "linkedin",
-    note: "Placeholder - replace with your public LinkedIn profile URL",
   },
   {
     name: "GitHub",
@@ -270,6 +269,7 @@ export const ABOUT_DATA = {
 };
 
 export const CONTACT_DATA = {
-  resumeLabel: "Resume Coming Soon",
+  resumeLabel: "PDF Available",
+  resumeUrl: "/Valery-Ortiz-Resume.pdf",
   emailPlaceholder: "Professional Email - Add Before Publishing",
 };

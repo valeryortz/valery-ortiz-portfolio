@@ -5,12 +5,14 @@ import { SOCIAL_LINKS } from '../data/portfolioData';
 export const LinksBar: React.FC = () => {
   const [clickedNotice, setClickedNotice] = useState<string | null>(null);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, name: string, note: string) => {
-    // Show a helpful non-intrusive tooltip toast when clicked
-    setClickedNotice(`${name}: ${note}`);
-    setTimeout(() => {
-      setClickedNotice(null);
-    }, 4500);
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, name: string, note?: string) => {
+    // If the link has a placeholder note (e.g. GitHub Coming Soon), show the non-intrusive tooltip
+    if (note) {
+      setClickedNotice(`${name}: ${note}`);
+      setTimeout(() => {
+        setClickedNotice(null);
+      }, 4500);
+    }
   };
 
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Sparkles, GraduationCap, Building2, CheckCircle, ArrowRight, Mail } from 'lucide-react';
+import { X, Sparkles, GraduationCap, Building2, CheckCircle, ArrowRight, Mail, Download } from 'lucide-react';
 import { HERO_DATA, EXPERIENCE_DATA, CONTACT_DATA } from '../data/portfolioData';
 
 interface RecruiterScanModalProps {
@@ -153,12 +153,21 @@ export const RecruiterScanModal: React.FC<RecruiterScanModalProps> = ({ isOpen, 
           </div>
 
           {/* Contact note */}
-          <div className="p-3 bg-[#fdf7f9] rounded-lg border border-[#f1dae1] flex items-center justify-between text-xs text-[#4B2E4F]">
+          <div className="p-3 bg-[#fdf7f9] rounded-lg border border-[#f1dae1] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-[#4B2E4F]">
             <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-[#C98F9D]" />
+              <Mail className="w-4 h-4 text-[#C98F9D] shrink-0" />
               <span>Contact email placeholder ready for recruiter connection.</span>
             </div>
-            <span className="font-semibold">{CONTACT_DATA.resumeLabel}</span>
+            <a
+              href={CONTACT_DATA.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-semibold text-[#4B2E4F] hover:text-[#692e3d] underline underline-offset-2 shrink-0"
+              title="Open Resume PDF in new tab"
+            >
+              <Download className="w-3.5 h-3.5 text-[#C98F9D]" />
+              <span>Resume PDF</span>
+            </a>
           </div>
 
         </div>

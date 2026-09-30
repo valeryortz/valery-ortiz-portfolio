@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Mail, Download, Check, Info, Sparkles } from 'lucide-react';
+import { FileText, Mail, Download, Check } from 'lucide-react';
 import { CONTACT_DATA } from '../data/portfolioData';
 
 interface ResumeContactProps {
@@ -8,7 +8,6 @@ interface ResumeContactProps {
 
 export const ResumeContact: React.FC<ResumeContactProps> = ({ onOpenRecruiterScan }) => {
   const [copied, setCopied] = useState(false);
-  const [showResumeNotice, setShowResumeNotice] = useState(false);
 
   const handleCopyEmailPlaceholder = () => {
     navigator.clipboard.writeText(CONTACT_DATA.emailPlaceholder);
@@ -51,18 +50,16 @@ export const ResumeContact: React.FC<ResumeContactProps> = ({ onOpenRecruiterSca
             </div>
 
             <div className="space-y-3">
-              <button
-                type="button"
-                onClick={() => setShowResumeNotice(true)}
+              <a
+                href={CONTACT_DATA.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-[#2D2A2E] bg-[#C98F9D] hover:bg-[#d7a6b2] rounded-lg shadow-xs hover:shadow-sm transition-all cursor-pointer"
-                title="Download Resume"
+                title="Download or View Resume PDF in new tab"
               >
                 <Download className="w-4 h-4" />
                 <span>Download Resume</span>
-                <span className="text-xs font-normal text-[#451f28] bg-[#f1dae1] px-2 py-0.5 rounded ml-1 font-semibold">
-                  ({CONTACT_DATA.resumeLabel})
-                </span>
-              </button>
+              </a>
 
               <button
                 type="button"
@@ -126,62 +123,6 @@ export const ResumeContact: React.FC<ResumeContactProps> = ({ onOpenRecruiterSca
         </div>
 
       </div>
-
-      {/* Resume Notice Modal */}
-      {showResumeNotice && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#2D2A2E]/80 backdrop-blur-xs animate-in fade-in">
-          <div className="bg-white rounded-xl max-w-md w-full p-6 shadow-2xl border border-[#e8e2dc] text-[#2D2A2E] space-y-4">
-            <div className="flex items-center justify-between pb-3 border-b border-[#eee8e2]">
-              <div className="flex items-center gap-2 text-[#4B2E4F] font-bold text-base">
-                <FileText className="w-5 h-5 text-[#C98F9D]" />
-                <span>Resume Document Status</span>
-              </div>
-              <button
-                type="button"
-                onClick={() => setShowResumeNotice(false)}
-                className="text-[#857e8a] hover:text-[#2D2A2E] text-sm font-semibold p-1"
-              >
-                ✕
-              </button>
-            </div>
-
-            <div className="p-3 bg-[#fdf7f9] rounded-lg border border-[#f1dae1] text-xs text-[#2D2A2E] flex items-start gap-2">
-              <Info className="w-4 h-4 text-[#C98F9D] shrink-0 mt-0.5" />
-              <div>
-                <span className="font-bold text-[#4B2E4F]">Status: {CONTACT_DATA.resumeLabel}</span>
-                <p className="mt-1 text-[#4a454d]">
-                  The formatted PDF version of Valery Ortiz’s resume is currently undergoing final review. You can review all project details, experience pillars, and technical skills right here on this interactive portfolio.
-                </p>
-              </div>
-            </div>
-
-            <p className="text-xs text-[#655f68] leading-relaxed">
-              When published, this button will directly link to Valery's verified resume PDF.
-            </p>
-
-            <div className="pt-2 flex gap-3">
-              <button
-                type="button"
-                onClick={() => {
-                  setShowResumeNotice(false);
-                  onOpenRecruiterScan();
-                }}
-                className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold text-[#2D2A2E] bg-[#C98F9D] hover:bg-[#d7a6b2] rounded-lg transition-colors cursor-pointer"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Open 30s Summary</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setShowResumeNotice(false)}
-                className="px-4 py-2 text-xs font-semibold text-[#4a454d] bg-[#eee8e2] hover:bg-[#e8e2dc] rounded-lg transition-colors cursor-pointer"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
