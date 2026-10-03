@@ -148,7 +148,7 @@ export const RecruiterScanModal: React.FC<RecruiterScanModalProps> = ({ isOpen, 
               Core Technical Toolkit
             </div>
             <p className="text-xs text-[#3b373d] leading-relaxed font-mono bg-[#faf8f5] p-3 rounded border border-[#e8e2dc]">
-              Python · SQL · Excel · R (Basic) · Power BI · Tableau · Microsoft Access / VBA · .NET/WPF · RAG · Semantic Search · BigQuery (Introductory) · Azure DevOps (Exposure)
+              Python · SQL · Excel · R · Power BI · Tableau · Microsoft Access / VBA · .NET/WPF · RAG · Semantic Search · BigQuery · Azure DevOps
             </p>
           </div>
 

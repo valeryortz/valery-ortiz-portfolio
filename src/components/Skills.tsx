@@ -59,33 +59,17 @@ export const Skills: React.FC = () => {
 
               {/* Skills Items */}
               <div className="flex flex-wrap gap-2 pt-2">
-                {cat.skills.map((skill) => {
-                  const isSpecialNote =
-                    skill.name.includes('— Basic') ||
-                    skill.name.includes('— Introductory') ||
-                    skill.name.includes('— Exposure');
-
-                  return (
-                    <span
-                      key={skill.name}
-                      className={`inline-flex items-center px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
-                        isSpecialNote
-                          ? 'bg-[#fdf7f9] text-[#4B2E4F] border border-[#f1dae1] font-semibold'
-                          : 'bg-white text-[#2D2A2E] border border-[#e8e2dc] hover:border-[#C98F9D]'
-                      }`}
-                    >
-                      {skill.name}
-                    </span>
-                  );
-                })}
+                {cat.skills.map((skill) => (
+                  <span
+                    key={skill.name}
+                    className="inline-flex items-center px-3 py-1.5 rounded-md text-xs font-medium transition-colors bg-white text-[#2D2A2E] border border-[#e8e2dc] hover:border-[#C98F9D]"
+                  >
+                    {skill.name}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Level of Experience Clarity Note */}
-        <div className="mt-8 text-center text-xs text-[#857e8a]">
-          <span>* Specific exposure levels clearly indicated for transparency (R — Basic, BigQuery — Introductory, Azure DevOps — Exposure).</span>
         </div>
 
       </div>
