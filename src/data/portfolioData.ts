@@ -13,6 +13,14 @@ export interface Project {
   summaryHighlights: string[];
 }
 
+export interface SocialLink {
+  name: string;
+  label: string;
+  url: string;
+  icon: 'linkedin' | 'github';
+  note?: string;
+}
+
 export interface SkillCategory {
   title: string;
   description: string;
@@ -36,19 +44,18 @@ export const HERO_DATA = {
   ],
 };
 
-export const SOCIAL_LINKS = [
+export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: "LinkedIn",
-    label: "LinkedIn Profile",
+    label: "LinkedIn",
     url: "https://www.linkedin.com/in/valery-ortiz",
     icon: "linkedin",
   },
   {
     name: "GitHub",
-    label: "GitHub - Coming Soon",
-    url: "#",
+    label: "GitHub",
+    url: "https://github.com/valeryortz",
     icon: "github",
-    note: "Placeholder - link will be activated soon",
   },
 ];
 
