@@ -30,9 +30,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRecruiterScan }) => {
           {/* Zone 1: Single text element wordmark */}
           <a
             href="#"
-            className="text-lg font-bold tracking-tight text-[#F7F3EF] hover:text-[#C98F9D] transition-colors whitespace-nowrap"
+            className="text-base sm:text-lg font-bold tracking-tight text-[#F7F3EF] hover:text-[#C98F9D] transition-colors whitespace-nowrap"
           >
-            Valery Ortiz
+            Valery Ortiz Jimenez
           </a>
 
           {/* Zone 2: 4-6 text links */}

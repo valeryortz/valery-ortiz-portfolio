@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="mt-8 pt-6 border-t border-[#3b373d] flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-[#857e8a]">
-          <p>© {new Date().getFullYear()} Valery Ortiz. Built for Data Analytics, Business Intelligence & Data Operations roles.</p>
+          <p>© {new Date().getFullYear()} Valery Ortiz Jimenez. Built for Data Analytics, Business Intelligence & Data Operations roles.</p>
           <p>Portfolio developed with focus on data quality, operational rigor, and applied AI.</p>
         </div>
       </div>

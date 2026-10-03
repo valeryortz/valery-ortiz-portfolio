@@ -28,7 +28,7 @@ export interface SkillCategory {
 }
 
 export const HERO_DATA = {
-  name: "Valery Ortiz",
+  name: "Valery Ortiz Jimenez",
   education: {
     degree: "Bachelor of Applied Science in Data Analytics",
     institution: "Miami Dade College",
