@@ -295,6 +295,36 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             </>
           )}
 
+          {/* PSI Workspace Specific Case Study Section */}
+          {project.id === 'psi-workspace-modernization' && (
+            <div className="pt-6 border-t border-[#e8e2dc] space-y-4">
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-[#4B2E4F] mb-1">
+                  Project Modernization Visual
+                </h3>
+              </div>
+
+              <figure className="space-y-3">
+                <div className="flex justify-center bg-[#faf8f5] p-2 sm:p-4 rounded border border-[#e8e2dc]">
+                  <img
+                    src="/psi-workspace-modernization.png"
+                    alt="Legacy-to-modernized comparison of PSI Workspace application"
+                    className="w-full max-w-2xl h-auto rounded border border-[#e8e2dc] shadow-xs"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="space-y-1.5 text-xs text-[#4a454d] leading-relaxed">
+                  <p>
+                    Legacy-to-modernized comparison of the PSI Workspace project, showing the transition from the original Microsoft Access-based interface to the newer .NET/WPF application.
+                  </p>
+                  <p className="text-[11px] text-[#655f68]">
+                    The visual highlights how familiar workflows and core plan information were preserved while the interface was reorganized to improve navigation, readability, and usability.
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+          )}
+
         </div>
 
         {/* Modal Footer */}
