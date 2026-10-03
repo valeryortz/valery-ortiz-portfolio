@@ -35,7 +35,7 @@ export const HERO_DATA = {
     graduation: "expected Spring 2027",
   },
   statement:
-    "I’m a Data Analytics student with professional experience in data operations, data quality, workflow improvement, and business process analysis. I enjoy understanding how processes work, finding ways to improve them, and using analytics and emerging AI tools to build practical solutions.",
+    "I’m a Data Analytics student with 8 years of professional experience in data operations, data quality, workflow management, and business process improvement. I combine hands-on operational experience with growing skills in analytics, business intelligence, and applied AI to build practical solutions to real business problems.",
   targetRoles: [
     "Data Analyst",
     "Business Intelligence",
@@ -171,7 +171,7 @@ export const EXPERIENCE_DATA = {
   organization: "Pension Services, Inc.",
   role: "Data Operations Lead",
   description:
-    "My role combines data quality, operational workflow management, process improvement, and team leadership within retirement-plan administration.",
+    "With 8 years at Pension Services, Inc., I have developed hands-on experience in data validation, workflow ownership, process improvement, quality control, and cross-functional operations within retirement-plan administration.",
   pillars: [
     {
       title: "Data Quality and Validation",
@@ -266,7 +266,7 @@ export const SKILLS_CATEGORIES: SkillCategory[] = [
 
 export const ABOUT_DATA = {
   paragraph:
-    "I value continuous learning, collaboration, and doing work I can stand behind. My professional background has given me experience working with operational data, data quality, complex workflows, and process improvement, while my education has allowed me to expand into analytics, business intelligence, and applied AI. I take feedback seriously, enjoy learning from people with different areas of expertise, and care about producing thoughtful and reliable work that contributes to the larger project or team.",
+    "I bring several years of professional experience working with operational data, data quality, complex workflows, compliance-driven processes, and cross-functional teams. My background has taught me how to investigate discrepancies, improve processes, translate business needs into structured requirements, and take ownership of the quality of the final output. As I continue developing my skills in analytics, business intelligence, and applied AI, I’m especially interested in opportunities where I can combine real-world operational experience with data and technology.",
   opportunitiesTarget: [
     "Data Analytics",
     "Business Intelligence",
