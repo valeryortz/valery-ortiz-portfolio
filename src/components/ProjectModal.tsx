@@ -153,6 +153,148 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             </div>
           )}
 
+          {/* City of Miami Specific Case Study Sections */}
+          {project.id === 'miami-benefits-rag' && (
+            <>
+              {/* Section: Prototype in Action */}
+              <div className="pt-6 border-t border-[#e8e2dc] space-y-6">
+                <div>
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-[#4B2E4F] mb-1">
+                    Prototype in Action
+                  </h3>
+                  <p className="text-xs text-[#655f68]">
+                    Real project screenshots captured during Phase 1 assistant testing.
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  {/* Screenshot 1 */}
+                  <figure className="space-y-2">
+                    <img
+                      src="/city-chatbot-interface.png"
+                      alt="Prototype Interface — Phase 1 City of Miami assistant"
+                      className="w-full h-auto rounded border border-[#e8e2dc] bg-[#faf8f5]"
+                      loading="lazy"
+                    />
+                    <figcaption className="text-xs text-[#4a454d] leading-relaxed">
+                      Prototype Interface — Phase 1 City of Miami assistant used to access property and Public Benefits information through a conversational interface.
+                    </figcaption>
+                  </figure>
+
+                  {/* Screenshot 2 */}
+                  <figure className="space-y-2">
+                    <img
+                      src="/city-public-benefits-query.png"
+                      alt="Example Query — Assistant responding to a Public Benefits question"
+                      className="w-full h-auto rounded border border-[#e8e2dc] bg-[#faf8f5]"
+                      loading="lazy"
+                    />
+                    <figcaption className="text-xs text-[#4a454d] leading-relaxed">
+                      Example Query — Example of the assistant responding to a Public Benefits question using retrieved source information.
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+
+              {/* Section: Retrieval Workflow */}
+              <div className="pt-6 border-t border-[#e8e2dc] space-y-4">
+                <div>
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-[#4B2E4F] mb-1">
+                    Retrieval Workflow
+                  </h3>
+                  <p className="text-xs text-[#655f68] leading-relaxed">
+                    Conceptual representation of the retrieval and reranking logic I worked on to improve relevance and reduce unsupported responses.
+                  </p>
+                </div>
+
+                {/* Technical Documentation Diagram */}
+                <div className="p-5 sm:p-6 bg-white rounded border border-[#d9d0c7] text-[#2D2A2E] text-xs">
+                  <div className="max-w-md mx-auto flex flex-col items-center">
+                    
+                    {/* User Question */}
+                    <div className="w-full px-4 py-2.5 bg-[#faf8f5] border border-[#d9d0c7] rounded text-center font-medium text-[#2D2A2E]">
+                      User Question
+                    </div>
+
+                    <div className="py-2 text-[#857e8a] font-mono text-sm">↓</div>
+
+                    {/* Semantic / Vector Retrieval */}
+                    <div className="w-full px-4 py-2.5 bg-[#faf8f5] border border-[#d9d0c7] rounded text-center font-medium text-[#2D2A2E]">
+                      Semantic / Vector Retrieval
+                    </div>
+
+                    <div className="py-2 text-[#857e8a] font-mono text-sm">↓</div>
+
+                    {/* Candidate Document Chunks */}
+                    <div className="w-full px-4 py-2.5 bg-[#faf8f5] border border-[#d9d0c7] rounded text-center font-medium text-[#2D2A2E]">
+                      Candidate Document Chunks
+                    </div>
+
+                    <div className="py-2 text-[#857e8a] font-mono text-sm">↓</div>
+
+                    {/* Relevance Scoring Box with Sub-signals */}
+                    <div className="w-full p-3.5 bg-[#faf8f5] border border-[#d9d0c7] rounded text-left">
+                      <div className="font-semibold text-center text-[#2D2A2E] mb-2 pb-1.5 border-b border-[#eee8e2]">
+                        Relevance Scoring
+                      </div>
+                      <ul className="space-y-1 text-[11px] text-[#4a454d] list-disc list-inside">
+                        <li>Semantic similarity</li>
+                        <li>Keyword overlap</li>
+                        <li>Exact / near-exact question match</li>
+                        <li>Definition handling</li>
+                      </ul>
+                    </div>
+
+                    <div className="py-2 text-[#857e8a] font-mono text-sm">↓</div>
+
+                    {/* Reranking */}
+                    <div className="w-full px-4 py-2.5 bg-[#faf8f5] border border-[#d9d0c7] rounded text-center font-medium text-[#2D2A2E]">
+                      Reranking
+                    </div>
+
+                    <div className="py-2 text-[#857e8a] font-mono text-sm">↓</div>
+
+                    {/* Support Check */}
+                    <div className="w-full px-4 py-2.5 bg-[#faf8f5] border border-[#d9d0c7] rounded text-center font-semibold text-[#2D2A2E]">
+                      Support Check
+                    </div>
+
+                    {/* Branches Container */}
+                    <div className="w-full mt-3 pt-3 border-t border-[#eee8e2] grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      
+                      {/* Sufficient support branch */}
+                      <div className="p-3 bg-[#faf8f5] border border-[#d9d0c7] rounded flex flex-col justify-between">
+                        <div className="text-[11px] font-semibold text-[#4B2E4F] mb-1">
+                          Sufficient support
+                        </div>
+                        <div className="text-[11px] text-[#2D2A2E] pt-1">
+                          → Generate Answer Using Retrieved Context
+                        </div>
+                      </div>
+
+                      {/* Insufficient support branch */}
+                      <div className="p-3 bg-[#faf8f5] border border-[#d9d0c7] rounded flex flex-col justify-between">
+                        <div className="text-[11px] font-semibold text-[#857e8a] mb-1">
+                          Insufficient support
+                        </div>
+                        <div className="text-[11px] font-mono text-[#692e3d] pt-1">
+                          → INSUFFICIENT_DATA
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* Disclaimer note */}
+                <p className="text-[11px] text-[#857e8a] leading-relaxed italic">
+                  This is a conceptual representation created to explain my contribution to the retrieval process. It is not an exported internal City architecture diagram.
+                </p>
+              </div>
+            </>
+          )}
+
         </div>
 
         {/* Modal Footer */}
