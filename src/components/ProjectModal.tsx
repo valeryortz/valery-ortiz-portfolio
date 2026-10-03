@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, CheckCircle2, Cpu, Wrench, UserCheck, ShieldAlert, Sparkles } from 'lucide-react';
+import { X, CheckCircle2, Cpu, Wrench, UserCheck, ShieldAlert, Sparkles, ExternalLink } from 'lucide-react';
 import { Project } from '../data/portfolioData';
 
 interface ProjectModalProps {
@@ -322,6 +322,34 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   </p>
                 </figcaption>
               </figure>
+            </div>
+          )}
+
+          {/* Retirement Plan Workflow Efficiency Analysis Specific Section */}
+          {project.id === 'retirement-workflow-efficiency' && (
+            <div className="pt-6 border-t border-[#e8e2dc] space-y-4">
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-[#4B2E4F] mb-1">
+                  Business Impact / Implementation
+                </h3>
+              </div>
+
+              <p className="text-sm text-[#3b373d] leading-relaxed bg-[#faf8f5] p-4 rounded-lg border border-[#e8e2dc]">
+                Findings from the workflow analysis helped support the implementation of instructional videos designed to guide clients through the census submission process, improve response quality, and reduce avoidable processing delays.
+              </p>
+
+              <div>
+                <a
+                  href="https://www.youtube.com/watch?v=yfnwbIBcDXc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-[#2D2A2E] bg-[#C98F9D] hover:bg-[#d7a6b2] rounded-lg shadow-xs hover:shadow-sm transition-all cursor-pointer"
+                  title="View Census Instruction Video on YouTube (Opens in new tab)"
+                >
+                  <span>View Census Instruction Video</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
             </div>
           )}
 
